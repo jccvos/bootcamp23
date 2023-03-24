@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootcamp Prototype</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="lmao">
+        <div class="logo">
+        
+        <button class="back" onclick="history.back()">Back</button>
+        </div>
+    </div>
+        <img src="image.png" width="100%">
+    <div class="container center">
+        
+        Men’s T-Shirt <img src="stars.png" height="15px"><br>
+        <h2>Black Crew Neck T-shirt</h2>
+        Fashion is form of self-expression and autonomy at a
+            perticular period & place and in a specific context
+        <div class="numbers">
+            <button class="back" onclick="numberDecrease()"><b>-</b></button>
+            <input type="text" id="inc" value=1>
+            <button class="back" onclick="numberIncrease()">+</button>
+        </div>
+    </div>
+    <div class="buttons">    
+        <button class="green"><a href="page2.html">Dressing room</a></button>
+        <button class="red"><a id="cart" href="#" onclick="toCart()">Add to cart</a></button>
+    </div>
+    <!--<script src="js/app.js"></script>-->
+    <script>
+        var i = 1;
+        function numberIncrease(){
+            document.getElementById('inc').value = ++i;
+        }
+        function numberDecrease(){
+            if (i > 1){
+                document.getElementById('inc').value = --i;
+            }
+        }
+        function toCart(){
+            if (i > 2){
+                document.getElementById('cart').href="page3.html";
+            } else {
+                document.getElementById("cart").href="page2.html";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootcamp Prototype</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+        
+            <button class="back" onclick="history.back()">Back</button>
+        </div>
+    </div>
+
+    <div class="sure">
+    <h1>Are you sure?</h1>
+    <p>You have clicked on the Black Crew Neck T-shirt
+        <b> 4 times</b>. Is that right?
+       </p>
+    </div>
+    <div class="globe">
+        <img src="globe.png" width="50%">
+        </div>
+    <div class="container center">
+        Return shipments provide a larger ecological footprint, and cause more CO<sub>2</sub>    emissions.<br><br>
+        <p>Click the button to the virtual dressing room to try on the items, to find out which is best.</p>
+        <b>Black Crew Neck T-shirt<br></b>
+        <div class="numbers">
+            <img src="image.png" width="20%">
+            <button class="back" onclick="numberDecrease()"><b>-</b></button>
+            <input type="text" id="inc" value=1>
+            <button class="back" onclick="numberIncrease()">+</button>
+        </div>
+    </div>
+    <div class="books"></div>
+    <div class="chapters"></div>
+    <div class="buttons">    
+        <button class="green"><a href="page2.html">Dressing room</a></button>
+        <button class="red"><a id="cart" href="#" onclick="toCart()">Add to cart</a></button>
+    </div>
+    <!--<script src="js/app.js"></script>-->
+    <script>
+        var i = 1;
+        function numberIncrease(){
+            document.getElementById('inc').value = ++i;
+        }
+        function numberDecrease(){
+            if (i > 1){
+                document.getElementById('inc').value = --i;
+            }
+        }
+        function toCart(){
+            if (i > 2){
+                document.getElementById('cart').href="page3.html";
+            } else {
+                document.getElementById("cart").href="page2.html";
+            }
+        }
+        
+    </script>
+</body>
+</html>
